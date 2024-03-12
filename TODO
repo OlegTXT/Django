@@ -1,0 +1,28 @@
+1 Модели
+Category:
+    id: PK
+    name: str
+    image: file
+
+Products:
+    id: PK
+    title: str
+    description: str
+    price: int
+    image: file
+    category: FK
+
+Cart:
+    id: PK
+    user: FK
+    products: MtM CartItem
+
+CartItem:
+    id: PK
+    product: PK
+    count: int
+
+....
+Main => Categories => Product for Category, Product => product detail, add to cart, Cart =>
+
+
