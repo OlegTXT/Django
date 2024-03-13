@@ -10824,3 +10824,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.img-card {
+    width: 30px;
+}

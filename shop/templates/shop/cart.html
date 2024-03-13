@@ -1,7 +1,26 @@
-{{ cart }}
+{% extends 'base.html' %}
 
-{{ block content }}
-{% for    %}
+{% block content %}
+<h4 class="mt-4 text-center mb-4">Cart</h4>
+<table class="table mt-2">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Count</th>
+        <th scope="col">Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for cart_item in cart_items %}
+    <tr>
+        <th scope="row">{{ cart_item.product.pk }}</th>
+        <td>{{ cart_item.product.title }}</td>
+        <td><img src="{{ cart_item.product.image.url }}" class="img-card=25"></td>
+        <td>{{ cart_item.quantity }}</td>
+        <td>{{ cart_item.total }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
-
-
