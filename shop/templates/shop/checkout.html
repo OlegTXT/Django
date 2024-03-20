@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="row g-3">
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Full name</label>
+    <input type="full_name" class="form-control" id="inputAddress" placeholder="Oleg Em">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address</label>
+    <input type="address" class="form-control" id="inputAddress2" placeholder="City Tashkent">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Checkout</button>
+  </div>
+</form>
+{% endblock content %}

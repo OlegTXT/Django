@@ -24,3 +24,6 @@ class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     items = models.ManyToManyField(CartItem)
     is_paid = models.BooleanField(default=False)
+
+
+

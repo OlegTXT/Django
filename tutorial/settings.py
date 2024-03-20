@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'shop',
+    'auth_users',
 ]
 
 MIDDLEWARE = [
+    # 'shop.middlewares.CartMiddleware',  # Работает только с экземпляра класса templateresponse
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -64,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'shop.middlewares.cart_items_count',
             ],
         },
     },
@@ -125,3 +128,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
+
+# LOGIN_URL = 'login/'
