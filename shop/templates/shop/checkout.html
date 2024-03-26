@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="row g-3" method="post">
+    {% csrf_token %}
+    <div class="col-12">
+        <label for="inputAddress" class="form-label">Full name</label>
+        <input name="full_name" type="text" class="form-control" id="inputAddress" placeholder="John Doe">
+    </div>
+    <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address</label>
+        <input name="address" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Checkout</button>
+    </div>
+</form>
+{% endblock %}
